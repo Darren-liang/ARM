@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LWDRunloopARM.h"
+#import "LWDCrashARM.h"
 
 @interface AppDelegate ()
 
@@ -20,6 +21,8 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    LWDCrashARM *arm = [[LWDCrashARM alloc] init];
+    
     LWDRunloopARM *ll = [[LWDRunloopARM alloc] init];
     [ll startRunloopMonitor];
     return YES;

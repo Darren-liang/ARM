@@ -11,6 +11,8 @@
 		7412F31321FF10C3004A61F0 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 7412F31221FF10C3004A61F0 /* Person.m */; };
 		7412F31621FF10DC004A61F0 /* Man.m in Sources */ = {isa = PBXBuildFile; fileRef = 7412F31521FF10DC004A61F0 /* Man.m */; };
 		7412F31921FF10E5004A61F0 /* Person+lwd.m in Sources */ = {isa = PBXBuildFile; fileRef = 7412F31821FF10E5004A61F0 /* Person+lwd.m */; };
+		746130CF2201A02100CC55FE /* LWDCrashARM.mm in Sources */ = {isa = PBXBuildFile; fileRef = 746130CE2201A02100CC55FE /* LWDCrashARM.mm */; };
+		746130D32201AA8300CC55FE /* LWDMemoryARM.m in Sources */ = {isa = PBXBuildFile; fileRef = 746130D22201AA8300CC55FE /* LWDMemoryARM.m */; };
 		7476604821FAA375004BB707 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7476604721FAA375004BB707 /* AppDelegate.m */; };
 		7476604B21FAA375004BB707 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7476604A21FAA375004BB707 /* ViewController.m */; };
 		7476604E21FAA375004BB707 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7476604C21FAA375004BB707 /* Main.storyboard */; };
@@ -47,6 +49,10 @@
 		7412F31521FF10DC004A61F0 /* Man.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Man.m; sourceTree = "<group>"; };
 		7412F31721FF10E5004A61F0 /* Person+lwd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Person+lwd.h"; sourceTree = "<group>"; };
 		7412F31821FF10E5004A61F0 /* Person+lwd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Person+lwd.m"; sourceTree = "<group>"; };
+		746130CD2201A02100CC55FE /* LWDCrashARM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LWDCrashARM.h; sourceTree = "<group>"; };
+		746130CE2201A02100CC55FE /* LWDCrashARM.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LWDCrashARM.mm; sourceTree = "<group>"; };
+		746130D12201AA8300CC55FE /* LWDMemoryARM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LWDMemoryARM.h; sourceTree = "<group>"; };
+		746130D22201AA8300CC55FE /* LWDMemoryARM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LWDMemoryARM.m; sourceTree = "<group>"; };
 		7476604321FAA375004BB707 /* demo1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7476604621FAA375004BB707 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7476604721FAA375004BB707 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -99,6 +105,24 @@
 			name = "卡断检测";
 			sourceTree = "<group>";
 		};
+		740F012B22019FC800984707 /* 崩溃监测 */ = {
+			isa = PBXGroup;
+			children = (
+				746130CD2201A02100CC55FE /* LWDCrashARM.h */,
+				746130CE2201A02100CC55FE /* LWDCrashARM.mm */,
+			);
+			name = "崩溃监测";
+			sourceTree = "<group>";
+		};
+		746130D02201AA5400CC55FE /* Abort内存过高崩溃监测 */ = {
+			isa = PBXGroup;
+			children = (
+				746130D12201AA8300CC55FE /* LWDMemoryARM.h */,
+				746130D22201AA8300CC55FE /* LWDMemoryARM.m */,
+			);
+			name = "Abort内存过高崩溃监测";
+			sourceTree = "<group>";
+		};
 		7476603A21FAA375004BB707 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +150,8 @@
 				7476604721FAA375004BB707 /* AppDelegate.m */,
 				7476604921FAA375004BB707 /* ViewController.h */,
 				7476604A21FAA375004BB707 /* ViewController.m */,
+				746130D02201AA5400CC55FE /* Abort内存过高崩溃监测 */,
+				740F012B22019FC800984707 /* 崩溃监测 */,
 				740F012722017C8400984707 /* 卡断检测 */,
 				7412F31121FF10C3004A61F0 /* Person.h */,
 				7412F31221FF10C3004A61F0 /* Person.m */,
@@ -290,10 +316,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				746130CF2201A02100CC55FE /* LWDCrashARM.mm in Sources */,
 				740F012A22017CC800984707 /* LWDRunloopARM.mm in Sources */,
 				7412F31321FF10C3004A61F0 /* Person.m in Sources */,
 				7476604B21FAA375004BB707 /* ViewController.m in Sources */,
 				7476605621FAA376004BB707 /* main.m in Sources */,
+				746130D32201AA8300CC55FE /* LWDMemoryARM.m in Sources */,
 				7412F31621FF10DC004A61F0 /* Man.m in Sources */,
 				7412F31921FF10E5004A61F0 /* Person+lwd.m in Sources */,
 				7476604821FAA375004BB707 /* AppDelegate.m in Sources */,
